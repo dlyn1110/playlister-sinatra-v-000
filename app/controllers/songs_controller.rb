@@ -24,7 +24,7 @@ class SongsController < ApplicationController
   flash[:message] = "Successfully created song."
 
   redirect to :'/songs/#{@song.slug}'
-end
+  end
 
   get '/songs/:slug' do
      @song = Song.find_by_slug(params[:slug])
